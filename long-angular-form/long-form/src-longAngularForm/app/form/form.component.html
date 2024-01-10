@@ -1,0 +1,73 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit(teamForm)" #teamForm="ngForm">
+    <div class="form-group">
+      <label for="name">Team Name </label>
+      <input
+        type="text"
+        class="form-control ng-invalid"
+        id="name"
+        required
+        [(ngModel)]="model.teamName"
+        name="name" placeholder= "Enter a team Name"#teamName="ngModel" minlength="3"
+      />
+
+      
+
+      <div
+        [hidden]="teamName.valid || teamName.pristine"
+        class="alert-danger"
+      > Enter a valid Team.
+      </div>
+    </div>
+
+    <div class = "form-group">
+        <label for="mascot">Team Mascot </label>
+        <select class="form-control" id="mascot" name="MASCOT"
+        required
+        [(ngModel)]="model.mascot" mascot="mascot" #mascot="ngModel" placeholder = "select a mascot">
+        <option disabled selected value="">Select a Mascot</option>
+        <option *ngFor="let masco of mascots" [value]="masco">{{masco}}</option>
+    </select>
+    </div>
+
+
+
+
+    <div class = "form-group">
+        <label for="playerNumber">Player Number </label>
+        <input type="number" class="form-control" id="playerNumber" name="number"
+        required [(ngModel)]="model.playerNumber" playerNumber="playerNumber" #playerNumber="ngModel"
+        maxlength="2" min="0"max="99">
+
+
+    </div>
+
+    <div class = "form-group">
+        <label for="email">Email</label>
+        <input type ="email" class="form-control" id="email" name="email" 
+        [(ngModel)]="model.userEmail" userEmail="email" #userEmail="ngModel"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"required>
+
+
+    </div>
+
+    <div *ngIf="userEmail.errors?.['required']">
+      Please provide an email so that we can contact you!
+    </div>
+
+    <p>
+    <button (click)="router.navigate(['/results']);"type="submit" class="butt" [disabled]="!teamForm.form.valid">Submit</button>
+      </p>
+
+
+
+  </form>
+
+
+  <div *ngIf="submittedData">
+    <h2>Submitted Player Choice:</h2>
+    <p>Team Name: {{ submittedFormData?.teamName }}</p>
+    <p>Player Number: {{ submittedFormData?.playerNumber }}</p>
+    <p>Mascot: {{ submittedFormData?.mascot }}</p>
+    <p>Email: {{ submittedFormData?.userEmail }}</p>
+  </div>
+</div>

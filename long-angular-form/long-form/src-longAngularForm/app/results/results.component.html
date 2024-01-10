@@ -1,0 +1,16 @@
+<div class="container">
+    
+    <div *ngIf="formData">
+        <h1>Player Survey Data</h1>
+      <p>Team Name: {{ formData.teamName }}</p>
+      <p>Player Number: {{ formData.playerNumber }}</p>
+      
+      <p>Mascot: {{ formData.mascot }}</p>
+      <p>Email:{{formData.userEmail}}</p>
+      <div *ngIf="formData.mascot==='Bears'">
+        <img class="picSize" src="assets/bearImg.png">
+        <h1>GO BEARS!!</h1>
+      </div>
+    </div>
+  </div>
+  
