@@ -1,0 +1,27 @@
+<form #fillForm="ngForm" (ngSubmit)="onSubmit(fillForm)">
+  <p>
+    <label for="firstname">First Name </label>
+    <input type="text" id="firstname" name="firstname" ngModel />
+  </p>
+
+  <p>
+    <label for="lastname">Last Name </label>
+    <input type="text" id="lastname" name="lastname" ngModel />
+  </p>
+
+  <p>
+    <label for="birthdayT">BirthDate </label>
+    <input type="datetime-local" id="birthdayT" name="birthdayT" ngModel />
+  </p>
+
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+</form>
+
+<div class= "inputMe" *ngIf="submittedData">
+  <h2>Basic Info About You</h2>
+  <p>First Name: {{ submittedData.firstname }}</p>
+  <p>Last Name: {{ submittedData.lastname }}</p>
+  <p>Accurate Birthdate: {{ submittedData.birthdayT }}</p>
+</div>

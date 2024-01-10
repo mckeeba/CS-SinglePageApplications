@@ -1,0 +1,28 @@
+
+
+p
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:dodgerblue;
+
+}
+
+h2
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:red;
+
+}
+
+.inputMe
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1;
+    list-style: none;
+    justify-content:space-around;
+
+
+
+}
