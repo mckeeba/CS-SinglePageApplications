@@ -1,0 +1,22 @@
+.aboutLink {
+    margin-left: 2%;
+}
+
+mat-card-content {
+    line-height: 1.8;
+    text-align: left;
+}
+
+mat-card-header {
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+mat-card-footer {
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+mat-card-actions {
+    justify-content: center;
+}

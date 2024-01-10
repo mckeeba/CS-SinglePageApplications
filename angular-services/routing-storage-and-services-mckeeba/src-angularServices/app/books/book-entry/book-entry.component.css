@@ -1,0 +1,7 @@
+#newBookForm {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+    max-width:fit-content;
+}

@@ -1,0 +1,14 @@
+<mat-accordion multi="true" *ngIf="books.length > 0">
+  <mat-expansion-panel *ngFor="let book of books">
+    <mat-expansion-panel-header>
+      {{ book.title }}
+    </mat-expansion-panel-header>
+    {{ book.blurb }}
+    <mat-action-row>
+      <a mat-button [routerLink]="['/book', book.isbn]">Go to book!</a>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<mat-card *ngIf="books.length == 0" class="message">
+    <mat-card-content>No books added yet</mat-card-content>
+</mat-card>
