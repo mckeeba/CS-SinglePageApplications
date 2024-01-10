@@ -1,0 +1,100 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  p
+  {
+    font-family:monospace;
+    font-size:medium;
+    
+  }
+  h1
+  {
+    text-align: center;
+    font-family: cursive;
+    text-decoration: underline;
+    font-size:xx-large;
+   
+    color:rgb(25, 25, 129);
+  }
+  
+  .routerButt
+  {
+    background-image:url(src/assets/wooden-wall-scratched-material-background-texture-concept.jpg);
+    
+
+  }
+
+  .butt
+  {
+    
+    background-image:url(src/assets/wooden-wall-scratched-material-background-texture-concept.jpg);
+    
+    
+  }
+  .butt:hover
+  {
+    color:rgb(255, 128, 0);
+  }
+  
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .paragraph-window {
+    border: 6px solid transparent;
+    border-image:url(src/assets/wooden-wall-scratched-material-background-texture-concept.jpg) 30 repeat;
+    
+    padding: 20px;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+  }
+
+
+  /*table css */
+
+  table 
+{
+ border:66px solid transparent;
+ border-image:url(src/assets/wooden-wall-scratched-material-background-texture-concept.jpg) 30 repeat;
+ padding:20px;
+ margin:1px;
+ display:flex;
+ flex-direction:column;
+ align-items: center;
+ background-color: black;
+ 
+}
+
+
+  
+  
+
+
+
+  .mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top:1px solid transparent;
+    cursor: pointer;
+    color:rgb(133, 133, 177);
+  }
+  .mat-mdc-header-row{
+    /* Your styles for the first header row */
+    color:white;
+  }
+  .mat-mdc-row:hover .mat-mdc-cell {
+    border-color:rgb(165, 135, 25);
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
+

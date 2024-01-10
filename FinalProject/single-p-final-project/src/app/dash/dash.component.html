@@ -1,0 +1,52 @@
+<div class="grid-container">
+ 
+  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
+     <!--Game map gif-->
+     <mat-grid-tile [colspan]="( cardLayout | async )?.gif?.cols" [rowspan]="( cardLayout | async )?.gif?.rows">
+      <app-card title=""><div class="gifBack"></div></app-card>
+    </mat-grid-tile>
+
+
+  
+
+     <!-- Special Card with combo functionality -->
+     <mat-grid-tile *ngFor="let i of [1, 2]; let first = first" 
+     [colspan]="( cardLayout | async )?.coolCard?.cols"
+     [rowspan]="( cardLayout | async )?.coolCard?.rows">
+<app-card *ngIf="first" title="The Numbers">
+<div>
+
+<section id="comboButtonLayout">
+<h1 class="button" (click)="rotate(0)">
+{{ comboCode[currentCode[0]] }}
+</h1>
+
+<h1 class="button" (click)="rotate(1)">
+{{ comboCode[currentCode[1]] }}
+</h1>
+
+<h1 class="button" (click)="rotate(2)">
+{{ comboCode[currentCode[2]] }}
+</h1>
+
+<h1 class="button" (click)="rotate(3)">
+{{ comboCode[currentCode[3]] }}
+</h1>
+
+<h1 class="button" (click)="rotate(4)">
+{{ comboCode[currentCode[4]] }}
+</h1>
+</section>
+
+<div *ngIf="isPatternCorrect">
+
+</div>
+<button class="awaitButt" mat-raised-button (click)="comboCorrect()">What awaits you?</button>
+
+
+</div>
+</app-card>
+</mat-grid-tile>
+
+   </mat-grid-list>
+ </div>

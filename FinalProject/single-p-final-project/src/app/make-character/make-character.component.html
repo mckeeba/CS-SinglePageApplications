@@ -1,0 +1,96 @@
+<button class="routerButt" mat-mini-fab (click)="goBackToHome()">🏰</button>
+
+<div class="container">
+  <div [hidden]="submitted"></div>
+
+  <h1>Make Your Adventurer!</h1>
+
+  <form (ngSubmit)="onSubmit()" #characterForm="ngForm">
+
+    <mat-form-field class="form-group">
+        <mat-label>Name</mat-label>
+        <input matInput type="text"
+        required [(ngModel)]="model.name" name="name" #name="ngModel">
+        <mat-error *ngIf="!name.valid && !name.pristine">
+            Need a Name
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+        <mat-label>Age</mat-label>
+        <input matInput type="number"
+        required [(ngModel)]="model.age" name="age" #age="ngModel" 
+        maxlength="3" min="0" max="999">
+        <mat-error *ngIf="!age.valid && !age.pristine">
+            Need an Age
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+        <mat-label>Race</mat-label>
+        <mat-select required [(ngModel)]="model.race" name="race" #race="ngModel">
+        <mat-option *ngFor="let rac of chRace" [value]="rac">{{rac}}</mat-option> 
+        </mat-select>
+        <mat-error *ngIf="!race.valid && !race.pristine">
+            Race required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+        <mat-label>Gender</mat-label>
+        <mat-select required [(ngModel)]="model.gender" name="gender" #gender="ngModel">
+        <mat-option *ngFor="let gen of chGender" [value]="gen">{{gen}}</mat-option> 
+        </mat-select>
+        <mat-error *ngIf="!gender.valid && !gender.pristine">
+            Pick a gender
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+        <mat-label>Class</mat-label>
+        <mat-select required [(ngModel)]="model.power" name="power" #power="ngModel">
+        <mat-option *ngFor="let pow of powers" [value]="pow">{{pow}}</mat-option> 
+        </mat-select>
+        <mat-error *ngIf="!power.valid && !power.pristine">
+            Need a class
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+        <mat-label>Weapon</mat-label>
+        <mat-select required [(ngModel)]="model.weapon" name="weapon" #weapon="ngModel">
+        <mat-option *ngFor="let weap of chWeapon" [value]="weap">{{weap}}</mat-option> 
+        </mat-select>
+        <mat-error *ngIf="!weapon.valid && !weapon.pristine">
+          You might Want a weapon  
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-text">
+        <mat-label class="labeltxt">Origin</mat-label>
+        <textarea class="txtarea"
+          matInput
+          required
+          [(ngModel)]="model.origin"
+          name="origin"
+          #origin="ngModel"
+          rows="8" 
+          minlength="60"
+          placeholder="Enter Your Origin story"
+        ></textarea>
+        <mat-error *ngIf="!origin.valid && !origin.pristine">
+         <strong>Origin Story Needs to be a length of 60 characters!</strong>
+          
+        </mat-error>
+      </mat-form-field>
+
+
+
+     
+ <button mat-raised-button type="submit" class="btn-submit" [disabled]="!characterForm.form.valid">Submit</button>   
+ 
+<button mat-raised-button type="button" class="btn-new" (click)="newCharacter(); characterForm.reset()">New Character</button>
+</form>
+
+
+</div>

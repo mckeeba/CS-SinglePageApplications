@@ -1,0 +1,116 @@
+.routerButt
+{
+  background-image:url(src/assets/wooden-wall-scratched-material-background-texture-concept.jpg);
+  
+
+}
+
+
+
+.lore-container
+{
+  display: flex;
+  gap:5px;
+  padding:16px;
+}
+.lore-container1 {
+ 
+  display:flex;
+  flex-direction:column;
+
+  
+}
+
+.lore-container2
+{
+  display:flex;
+  flex-direction:row;
+
+}
+
+.lore-card-overview {
+  color:bisque;
+  width: 400px;
+  margin-bottom: 16px;
+  background-image:url(src/assets/LoreCard1.jpeg);
+  background-size:cover;
+  background-position: center;
+
+  border: 7px solid transparent;
+    border-image:url(src/assets/wooden-wall-scratched-material-background-texture-concept.jpg) 30 repeat;
+    
+    padding: 20px;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+  
+}
+
+.lore-card-world
+{
+  color:rgb(132, 199, 131);
+  font-weight: bold;
+  font-family:fantasy;
+  width: 400px;
+  margin-bottom: 16px;
+  background-image:url(src/assets/LoreCard2.jpeg);
+  background-size:cover;
+  background-position: center;
+
+  border: 7px solid transparent;
+  border-image:url(src/assets/wooden-wall-scratched-material-background-texture-concept.jpg) 30 repeat;
+  
+  padding: 20px;
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+
+}
+
+
+
+.lore-card-fr
+{
+  color:white;
+  width: 450px;
+  margin-bottom: 16px;
+  background-image:url(src/assets/LoreCard4.jpeg);
+  background-size:cover;
+  background-position: center;
+
+  border: 7px solid transparent;
+  border-image:url(src/assets/wooden-wall-scratched-material-background-texture-concept.jpg) 30 repeat;
+  
+  padding: 20px;
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+
+.lore-card-plot
+{
+  color:rgb(148, 194, 196);
+  font-weight: 700;
+  font-family: fantasy;
+  width: 500px;
+  margin-bottom: 16px;
+  background-image:url(src/assets/LoreCard3.jpeg);
+  background-size:cover;
+  background-position: center;
+
+  border: 7px solid transparent;
+  border-image:url(src/assets/wooden-wall-scratched-material-background-texture-concept.jpg) 30 repeat;
+  
+  padding: 20px;
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
