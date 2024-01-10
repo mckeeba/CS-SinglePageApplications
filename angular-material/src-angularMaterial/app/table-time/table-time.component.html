@@ -1,0 +1,52 @@
+<table mat-table [dataSource]="dataSource" class="top-table">
+  
+
+  <!-- Movies Column -->
+  <ng-container matColumnDef="top-movies">
+    <th mat-header-cell *matHeaderCellDef>Movies</th>
+    <td mat-cell *matCellDef="let element"> {{element.movies}} </td>
+  </ng-container>
+
+  <!-- Food Column -->
+  <ng-container matColumnDef="top-foods">
+    <th mat-header-cell *matHeaderCellDef>Foods</th>
+    <td mat-cell *matCellDef="let element"> {{element.foods}} </td>
+  </ng-container>
+
+  <!-- TvShows Column -->
+  <ng-container matColumnDef="top-tvshows">
+    <th mat-header-cell *matHeaderCellDef>TVshows</th>
+    <td mat-cell *matCellDef="let element"> {{element.tvShows}} </td>
+  </ng-container>
+
+
+  <!-- Ratings Column -->
+  <ng-container matColumnDef="top-ratingsOutOf10">
+    <th mat-header-cell *matHeaderCellDef>ComboRatings</th>
+    <td mat-cell *matCellDef="let element"> {{element.ratingsOutOf10}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row (click)="clickedRows.add(row)"
+  [class.demo-row-is-clicked]="clickedRows.has(row)"
+  *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+ <div class ="listrate">
+    <h3>
+     Selected Ratings
+    </h3>
+  
+  
+  <div *ngIf="!clickedRows.size">
+   
+  </div>
+  
+  <ul>
+    <li *ngFor="let clickedRow of clickedRows">
+      Clicked on Rating- {{clickedRow.ratingsOutOf10}}
+    </li>
+  </ul>
+  
+</div>

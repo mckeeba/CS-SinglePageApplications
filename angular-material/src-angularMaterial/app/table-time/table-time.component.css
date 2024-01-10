@@ -1,0 +1,59 @@
+table 
+{
+    background-color: black;
+    position:fixed;
+    top: 90%; 
+    left: 0%;
+    width: 40%;
+    transform: translateY(-90%); 
+    transform: translateX(-50);
+}
+
+
+  
+  .top-movies {
+    padding-left: 16px;
+    font-size: 20px;
+  }
+  
+  .top-tvshows {
+    padding-left: 16px;
+    font-size: 20px;
+  }
+  
+  .top-foods {
+    font-style: italic;
+    padding-left: 16px;
+    font-size: 20px;
+  }
+  
+  .top-ratingsOutOf10 {
+    width: 32px;
+    border-right: 1px solid;
+    padding-right: 24px;
+    text-align: center;
+    
+  }
+
+
+  .mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-mdc-row:hover .mat-mdc-cell {
+    border-color:aliceblue;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
+
+  .listrate
+  {
+    position:fixed;
+    top:27%;
+    transform: translateY(-45%);  
+    color:white;
+  }

@@ -1,0 +1,15 @@
+mat-toolbar
+{
+    height:64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+   
+    width: 100% !important;
+}
+
+
+example-spacer {
+    flex: 1 1 auto;
+  }
+

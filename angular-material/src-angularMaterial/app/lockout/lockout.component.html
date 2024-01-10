@@ -1,0 +1,11 @@
+<div class="lock-container">
+  <button mat-raised-button (click)="toggleLock()">{{ isLocked ? 'Unlock' : 'Lock' }}</button>
+  <div class="lockIcon" [ngClass]="{ 'locked': isLocked }"></div>
+  
+
+</div>
+
+<mat-progress-bar [mode]="progressBarMode"></mat-progress-bar>
+
+
+

@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+body
+{
+    background: rgb(0, 59, 107);
+    background:radial-gradient(circle, rgb(198, 6, 6) 0%, rgb(72, 0, 255) 30%, rgb(0, 0, 0) 70%);
+    display: flex;
+    flex-direction: row;
+    
+}
+
