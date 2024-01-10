@@ -1,0 +1,29 @@
+#appHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.headerList {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+.headerListItem {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.headerLink {
+    font-size: large;
+}
+
+.active {
+    background-color: #e0e0e0;
+}

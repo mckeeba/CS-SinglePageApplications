@@ -1,0 +1,29 @@
+<span class="fullyCentered">
+  <mat-spinner *ngIf="loading"></mat-spinner>
+</span>
+<main id="blogList" *ngIf="!loading">
+  <mat-accordion multi="true" *ngIf="posts.length > 0">
+    <mat-expansion-panel *ngFor="let post of posts" class="singlePost">
+      <mat-expansion-panel-header>
+        <h1>{{ post.title }}</h1>
+      </mat-expansion-panel-header>
+      <span>
+        {{ post.contents }}
+      </span>
+      <mat-panel-description id="metaData">
+        Author: {{post.author }}<br>
+        Created: {{post.dates[0] | date:'short'}}<br>
+        Updated: {{post.dates[post.dates.length-1] | date:'short'}}<br>
+      </mat-panel-description>
+      <mat-action-row>
+        <button mat-stroked-button color="warn"
+          (click)="deletePost(post.title)">Delete Post</button>
+        <button mat-stroked-button color="primary"
+          [routerLink]="'/posts/edit/' + post.title">Edit Post</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-card *ngIf="posts.length == 0" class="message">
+      <mat-card-content style="margin-top:2%;">No posts yet</mat-card-content>
+  </mat-card>
+</main>

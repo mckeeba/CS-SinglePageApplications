@@ -1,0 +1,27 @@
+#appFooter {
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footerList {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+.footerListItem {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.headerLink {
+    font-size: large;
+}

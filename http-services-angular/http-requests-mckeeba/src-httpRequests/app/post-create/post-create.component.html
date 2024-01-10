@@ -1,0 +1,17 @@
+<form (ngSubmit)="addPost(postForm)" #postForm="ngForm" id="newPostForm">
+    <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput ngModel name="title" id="title" required>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Author</mat-label>
+        <input matInput ngModel name="author" id="author" required>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Content</mat-label>
+        <textarea matInput ngModel name="contents" id="contents" required></textarea>
+    </mat-form-field>
+    <span class="centeredRow">
+        <button mat-raised-button type="submit" color="primary" id="createButton">Create Post</button>
+    </span>
+</form>

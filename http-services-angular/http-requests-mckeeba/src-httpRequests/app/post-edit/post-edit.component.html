@@ -1,0 +1,44 @@
+<span class="fullyCentered">
+    <mat-spinner *ngIf="loading"></mat-spinner>
+</span>
+
+<form (ngSubmit)="editPost(postEditForm)"
+    #postEditForm="ngForm" id="postEditForm" *ngIf="!loading">
+    <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput
+            [(ngModel)]="post!.title"
+            [disabled]="!editTitle"
+            name="title" id="title">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Author</mat-label>
+        <input matInput
+            [(ngModel)]="post!.author"
+            [disabled]="!editAuthor"
+            name="author" id="author">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Content</mat-label>
+        <textarea matInput
+            [(ngModel)]="post!.contents"
+            name="contents" id="contents">
+        </textarea>
+    </mat-form-field>
+    <span class="buttons">
+        <button
+            mat-raised-button
+            color="warn"
+            type="button"
+            routerLink="/blog"            >
+            Cancel
+        </button>
+        <span class="evenSpacer"></span>
+        <button
+            mat-raised-button
+            color="secondary"
+            type="submit">
+            Save
+        </button>
+    </span>
+</form>
